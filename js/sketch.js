@@ -6,7 +6,7 @@ function setup() {
     colorMode(HSB);
 
 
-    for(var i = 0; i < 50; i++) {
+    for(var i = 0; i < 100; i++) {
         circles();
     }
      //'calling' the function into setup
@@ -22,6 +22,7 @@ function circles() {
     var d = random(5, 150);
     var hue = random(120, 255);
 
+    noStroke();
     fill(hue, 255, 255, 0.1);
     circle(x, y, d);
 }

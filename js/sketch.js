@@ -1,11 +1,27 @@
 function setup() {
     var canvas = createCanvas(800, 800);
     canvas.parent("p5container");
+
+    background(220); //put it before cM otherwise it'll change it too
+    colorMode(HSB);
+
+
+    for(var i = 0; i < 50; i++) {
+        circles();
+    }
+     //'calling' the function into setup adds it back
 }
 
 function draw() {
-    background(220);
 
-    fill(255, 255, 255);
-    ellipse(400, 400, 200);
+}
+
+function circles() {
+    var x = random(width);
+    var y = random(height);
+    var d = 200;
+    var hue = random(120, 255);
+
+    fill(hue, 255, 255, 0.1);
+    circle(x, y, d);
 }
